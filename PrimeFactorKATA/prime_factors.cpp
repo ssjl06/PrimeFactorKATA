@@ -1,13 +1,17 @@
 #include <vector>
 class PrimeFactor {
 public:
-	std::vector<int> of(int i) {
-		if (i == 2) {
-			return { 2 };
+	std::vector<int> of(int number) {
+		std::vector<int> result = {};
+		if (number > 1) {
+			if (number == 4) {
+				result.push_back(2);
+				result.push_back(2);
+			}
+			else {
+				result.push_back(number);
+			}
 		}
-		if (i == 3) {
-			return { 3 };
-		}
-		return {};
+		return result;
 	}
 };
