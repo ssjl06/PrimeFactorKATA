@@ -1,8 +1,9 @@
 #include "pch.h"
+#include "../PrimeFactorKATA/prime_factors.cpp"
+#include <vector>
 
-TEST(PrimeFactors, PrimeTest) {
-	EXPECT_EQ(1, 1);
-	EXPECT_EQ(1, 1);
-	EXPECT_EQ(1, 1);
-	EXPECT_EQ(1, 1);
+TEST(PrimeFactors, Of1) {
+	PrimeFactor prime_factor;
+	std::vector<int> expected = {};
+	EXPECT_EQ(expected, prime_factor.of(1));
 }
